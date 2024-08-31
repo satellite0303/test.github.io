@@ -1,0 +1,62 @@
+/*這裡可以跟在css裡面一樣設定顯示的格式 兩編寫這的語法相同 ps只在html或css其中一邊設定就好，會亂掉閱讀性很差*/
+html {/*網頁的樣式和畫面如何被呈現 */
+    height: 100%;
+    width: 100%;
+    font-size:calc(100em-50em);/*calc可以做簡單的運算*/
+    /*大小
+    1px: 的實際長度通常會是 1 吋(2.54cm) 的 1/96。
+    1em:用在font-size會依照父標籤字體大小做倍數計算
+        用在width依照字體大小倍數計算 沒有設定元素的字體大小會默認父元素的字體大小
+    1rem:依照根標籤的大小做倍數計算
+    */
+}
+/*a標籤的格式*/
+a:link{/*尚未被點取前*/
+    color: blue;
+}
+a:visited{/*被使用過後*/
+    color:green;
+}
+a:hover{/*游標放在錨點上時的狀態*/
+    text-decoration: none;/*底線消失*/
+}
+
+p{/*p標籤的格式*/
+    font-size: 2rem;
+    color:red;/*s內容色*/
+}
+
+/*設定帶有aa類別的標籤(就跟pyhton的類別一樣 )
+也可以寫成 標籤.類別(帶有某類別的標籤 會和一般的標籤不同)
+如果有指定可以把底下 .類別改成標籤.類別
+*/
+.aa{
+    background-color:rgb(255, 255, 255);/*背景色*/
+}
+
+#123{/*設定有123這個id的(id不要重複，是身分證一樣的存在)*/
+    color:brown;
+}
+/*類別跟id 開頭不能數字*/
+
+
+/*設定buttom標籤裡的p標籤
+後裔連結器（descendant combinator)語法，它是用空格（一到多個）連結兩個以上的標籤
+想對直接跟在標題後面的那個段落設定樣式。要作到就使用一個 + （相鄰連結器 adjacent sibling combinator） 第一個標籤+下一個標籤
+*/
+button {
+    height: 40px;
+    width: 50px;
+    border-radius: 20px;/*可以設定值使框框更圓滑(越大越圓滑)*/
+    border-style: solid;/**設定邊框樣式(預設一層白框)*/
+    border-width: 1px;/**邊框厚度*/
+    color: green;
+    background-color:black;/*背景色*/
+}
+button:hover{
+    cursor:pointer;/*設定滑鼠放上去會有啥變化 預設是沒有)*/
+    background-color:rgb(49, 49, 49);/*背景色*/
+}
+button:active{/*當被按下*/
+    background-color:rgb(255, 0, 0);/*背景色*/
+}
