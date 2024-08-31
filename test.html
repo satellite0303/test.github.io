@@ -1,0 +1,120 @@
+<!doctype html><!--宣告這是什麼類型的文件 標準html文件 網頁的內容和語意結構-->
+
+<html lang = "en"><!--根標籤  lang在開頭可聲明這篇文章的是甚麼文字 可以幫助引擎理解這篇文章或銀幕處理器理解內文(放在內文)-->
+  <head><!--基礎設定-->
+    <title>first</title><!--大標籤 就頁面上顯示的-->
+    
+    <meta charset="utf-8" /><!--編碼-->
+    <meta name = "description" content="給谷哥爬的"/><!--給谷哥爬到後底下寫啥-->
+    <meta name = "keyword" content="test-ewww"/><!--啥關鍵字能搜索到-->
+    <meta name = "author" content="satellite"/><!--作者是誰-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--使非電腦的畫面不會擠在一起或內容變很小不好閱讀
+    width = device-width 配合螢幕調整寬度
+    initial-scale = 1.0畫面大小100%
+    user-scalable = no 或 mininum-scalablbe = 1;maxinum-scalable = 1(最小尺寸跟最尺寸設1) 防止使用者用手指做畫面的縮放
+    -->
+    
+    <link rel = "stylesheet" href = "style.css"/><!--引用外部的檔案 設定格式清單 載入css檔(或網址也可以)-->
+    <link rel = "icon" href = "images.jpg"/><!---設定網頁小頭像 這裡跑不出來-->
+    <link rel = "canonical" href = "https://test/785//7"/><!--自製網址-->
+    <!--
+    https://www.fooish.com/html/link-preload.html
+    https://www.fooish.com/html/link-apple-touch-icon.html
+    https://www.fooish.com/html/link-prev-next.html
+    https://www.fooish.com/html/link-canonical.html    
+    -->
+    
+    <style>
+    </style>
+    
+  </head>
+
+  <body  background="001.jpg ">
+    <!--內容物 背景顏色要用bgcolor bgproperties="fixed"(使背景圖像固定不動，不過只有IE有效果)-->
+    <a href = "https://www.facebook.com/" target="_new" tabindex="1">fb</a>
+    <!--a 超連結(錨點) href放連結(檔案或某個tagid (要用#)) target開啟的頁面狀態:_new新頁面，_top小視窗，_blank新視窗, tabindex是指按下tab後跳的順序第幾位-->
+    
+    H~~<!--直接顯示文字(接續上一個東西)-->
+    
+    <hr size="5" align="center" noshade width="120%"/>
+    <!--hr水平線 size寬度 align:left左 right右 center中 width長度 -->
+    
+    <h6 tabindex="2" dir=rtl>Hello my friend</h6>
+    <!--h設定標題大小(1~6) 數字越小字越大  dir文字方向:ltr從左到右,rtl從右到左,auto讓瀏覽器自動判斷，預設值 -->
+
+    <div contenteditable="true" draggable="true" spellcheck="true">
+      <p>touch me</p><!--p段落  內容=>元素-->
+    </div>
+    <!--div是自由容器，能裝奇怪的東西 contenteditable是否可以更改內容 draggable是否可以拖拉 spellcheck自動拼音檢查-->
+    
+    <p translate="true">hi
+    </br><strong><u><i><font face="cursive" >
+      hihi
+    </font></i></u></strong></p> 
+    <!--p段落(跳一行) translate是否可以被股哥翻譯 br換行 strong(b)使內容變粗體 u加上斜線 i斜體 font設定字的樣式 face字形-->
+    
+    <p hidden style = "color=blue">you can't see me</p>
+    <!--hidden可以隱藏東西 可以設定單行的格式，格式跟css一樣但不建議這樣寫，閱讀性維護性很差-->
+
+    <img src=images.jpg
+        data-x="414354"/>
+        <!--img圖片() data放自訂義資料，讓javascript可以操控-->
+
+    <ul type=circle>
+      <!--ul製作一個符號清單(可換成ol數字清單) type清單樣式(預設小圓點disc circle空心小圓 sqare黑實心正方)或是數字的(A英文大寫 a英文小寫 l=>l.ll... i=>i.ii...)-->
+      <li>1</li><!--li清單第一項-->
+      <li>2</li>
+    </ul>
+
+    <dl>
+      <dt>sa<!--一個東西(?-->
+      <dd>as<!--一個東西要講的東西(?-->
+    </dl>
+
+    <button accesskey="s">
+        fb~~
+      <a href = "https://www.facebook.com/" target="_new" tabindex="3" ></a>
+    </button><!--button按鈕 可被鍵盤上的s操作-->
+    
+    <button class="aa">fb~~</button>
+    <h3 id="123">伊呀哈</h3>
+
+    <pre>
+      可以把這裏面的東西原本的呈現出來!
+懂嗎
+    </pre>
+
+    <table border="1" cellspacing="2"><!--table表格 border外框多粗 cellspacing儲存格之間的距離-->
+      <caption>iyaha</caption><!--表格標題-->
+      <td>1</td><!--一般的儲存格，不能調整-->
+      <td>2</td>
+      <tr/><!--表格換行-->
+      <th colspan="2">3</th>
+      <!--特殊儲存格，可用屬性調整 (表格標題也可用)
+      align:控制水平是left(靠左).right(靠右).center(置中)
+      valign:控制垂直是top(靠上).middle(置中).bottom(靠下)
+      colspan:儲存格橫跨 N 個欄
+      rowspan:儲存格下跨 N 個列-->
+    </table>
+
+    <marquee>跑馬燈</marquee>
+    <!--direction:控制行進的方向right.up.down
+    scrollamount:控制行進的步伐
+    behavior=控制行進的方式：slide文字碰到底邊就會停止.alternate左右碰撞
+    width:設定行進的寬度
+    height:設定行進的高度-->
+
+  </body>
+</html>
+
+<!--父標籤:就是目前標籤的上一層標籤
+子標籤同理
+兄弟標籤:同個父標籤的
+<a(標籤(前)) ???=???(屬性 盡量在css或style設定 因為若連html也有維護性很差)>內容(沒內容叫空元素 /可放在前標籤後)</a(後)>(元素)  -->
+
+<!--https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics-->
+<!--https://cc.cust.edu.tw/~ven/100-1.html#b03 這跟上一個都基礎語法，但這個更詳細上個是帶範例-->
+<!--https://htmlcolorcodes.com/zh/ 顏色代碼-->
+<!--https://www.bing.com/search?q=html%E5%AD%97%E9%AB%94%E6%A8%A3%E5%BC%8Fface&qs=n&form=QBRE&sp=-1&lq=0&pq=html%E5%AD%97%E9%AB%94%E6%A8%A3%E5%BC%8Fface&sc=0-12&sk=&cvid=62248A26E5144BE29BEFDF9B2357D18A&ghsh=0&ghacc=0&ghpl=
+face字樣-->
+<!--https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML 除錯用-->
